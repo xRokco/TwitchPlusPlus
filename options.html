@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <title>Twitch++ Options</title>
+        <style type="text/css">
+            button.accordion {
+                background-color: #eee;
+                color: #444;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                text-align: left;
+                border: none;
+                outline: none;
+                transition: 0.4s;
+            }
+
+            #plus {
+                float: right;
+            }
+
+            button.accordion.active, button.accordion:hover {
+                background-color: #ddd;
+            }
+
+            div.panel {
+                padding: 0 18px;
+                background-color: white;
+                display: none;
+            }
+
+            #wrapper {
+                margin-left: auto;
+                margin-right: auto;
+                width: 40%;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <label for="hideExtensions">Hide Twitch Extensions: </label><input type="checkbox" id="hideExtensions" name="hideExtensions"><br>
+            <label for="autoTheatre">Automatic Theatre Mode: </label><input type="checkbox" id="autoTheatre" name="autoTheatre"><br>
+            <label for="cursorMute">Enable Cursor Mute: </label><input type="checkbox" id="cursorMute" name="cursorMute"><br>
+
+            <div id="status"></div>
+            <br/>
+            <button id="save">Save</button>
+
+            <h1>Changelog</h1>
+            <ul>
+                <h1>0.1</h1>
+                <li>Initial release</li>
+                <h1>0.2</h1>
+                <li>Improved the auto theatre mode so it works when you are visiting from another twitch stream</li>
+            </ul>
+
+            <script src="options.js"></script>
+        </div>
+    </body>
+</html>

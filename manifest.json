@@ -1,0 +1,31 @@
+{
+   "background": {
+      "scripts": [ "jquery.min.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon_48.png",
+      "default_popup": "popup.html",
+      "default_title": "settings"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "jquery.min.js", "script.js" ],
+      "matches": [ "*://*.twitch.tv/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Some simple Twitch.tv enhancements",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png",
+      "48": "icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtOGObK4Le0V0VBMq3Cl+cd5JZCb6LLW7Flf2dW8otDYnFE81B3SGiQs9soVfeR2V9JiUxxkB7n9l8Liq9QFcyhwj08u56KfapK77f8thd7v9dZWfgvXI7sPM5kl1iqd8bcyfg9jgKtOQTkVS7dK8DYsDUhnedrgzNsRQvEnUdYCsoU6vKOfb3fDoPb7etlG6/lQqHBkc1q/TF1+rYTvE0aRVxmtGuM4wXA1pID7nBRGj+W5xxeHLgqevhKhBdeiKJ48ah9dsyHRXlgm2FVfogCish6ZvEL+C/0KoRGbZkTK1isK20FxxGN/qXlxoM6RNksjLgpeBY9TLY5qL4cS9dQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "37",
+   "name": "Twitch++",
+   "options_page": "options.html",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.2",
+   "web_accessible_resources": [ "index.html" ]
+}
